@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "hgv-spo-it-vodafone-devices",
+    "id": "6d63d89d-bfd7-4590-803d-b6fc8cd23768",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "hgv-spo-it-vodafone-devices description"
+      },
+      "longDescription": {
+        "default": "hgv-spo-it-vodafone-devices description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "hgv-spo-it-vodafone-devices Feature",
+        "description": "The feature that activates elements of the hgv-spo-it-vodafone-devices solution.",
+        "id": "097e31ba-578a-4572-b8ea-824f758ed735",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/hgv-spo-it-vodafone-devices.sppkg"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "it-vodafone-devices-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/itVodafoneDevices/ItVodafoneDevicesWebPart.js",
+          "manifest": "./src/webparts/itVodafoneDevices/ItVodafoneDevicesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "sp-init": {
+      "path": "https://my.sharepoint.com/_layouts/15/init.js",
+      "globalName": "$_global_init"
+    },
+    "microsoft-ajax": {
+      "path": "https://my.sharepoint.com/_layouts/15/MicrosoftAjax.js",
+      "globalName": "Sys",
+      "globalDependencies": ["sp-init"]
+    },
+    "sp-runtime": {
+      "path": "https://my.sharepoint.com/_layouts/15/SP.Runtime.js",
+      "globalName": "SP",
+      "globalDependencies": ["microsoft-ajax"]
+    },
+    "sharepoint": {
+      "path": "https://my.sharepoint.com/_layouts/15/SP.js",
+      "globalName": "SP",
+      "globalDependencies": ["sp-runtime"]
+    }
+  }
+}

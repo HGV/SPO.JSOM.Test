@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.20.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "version": "1.17.1",
+    "libraryName": "hgv-spo-it-vodafone-devices",
+    "libraryId": "6d63d89d-bfd7-4590-803d-b6fc8cd23768",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "hgv-spo-it-vodafone-devices",
+    "solutionShortDescription": "SharePoint solution to import Vodafone devices data",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

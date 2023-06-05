@@ -1,0 +1,117 @@
+// Make workbench canvas use full page width  
+:global(#workbenchPageContent),
+:global(.CanvasComponent.LCS .CanvasZone) {  
+  max-width: initial;  
+}  
+:global(#workbenchPageContent > div),
+:global(#workbenchPageContent > div > div),
+:global(#workbenchPageContent > div > div > div) { 
+  height: 100%;
+}  
+
+// Override third party SuperTreeView CSS  
+:global(.super-treeview>div>.super-treeview-node>.super-treeview-node-content>input[type=checkbox])  
+{  
+  appearance: radio;
+  -webkit-appearance: radio; /* Chrome, Safari, Opera */  
+  -moz-appearance: radio;    /* Firefox */  
+}  
+
+:root {
+  --button-border: #ababab;
+  --button-text-disabled: #b1b1b1;
+  --button-background-disabled: #fdfdfd;
+  --button-text: #444;
+  --button-background: #fdfdfd;
+  --field-border: #d8d8d8;
+  --hover-dark: #354c62;
+  --hover-light: rgba(53, 76, 98, 0.5);
+  --main-text: #494c4f;
+  --main-text-soft: #777;
+  --main-text-disabled: #b1b1b1;
+  --menu-border: #f0f0f0;
+  --main-background: white;
+  --shadow: rgb(0 0 0 / 47%);
+}
+
+.container {
+  padding-bottom: 25px;
+}
+
+.item-selected .cell-check > div,
+.row:hover .cell-check > div {
+  visibility: visible;
+}
+
+.item-selected .cell-check {
+  background-color: var(--main-text);
+  border-right-color: var(--hover-light);
+  color: white;
+}
+
+.item-selected > td,
+.row:hover > td {
+  background-color: var(--hover-light);
+}
+
+.row.item-selected td.cell-check {
+  background-color: var(--main-text);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+.cell-check svg {
+  fill: currentColor;
+  width: 0.8rem;
+}
+
+.cell-check {
+  padding: 2px 7px 0px 7px;
+  cursor: pointer;
+}
+
+.cell-check > div {
+  visibility: hidden;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+}
+
+.action {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.action svg {
+  width: 1.3rem;
+}
+
+.title {
+  padding-left: 5px;
+  white-space: nowrap;
+}
+
+.action.disabled {
+  fill: var(--main-text-disabled);
+  color: var(--main-text-disabled);
+}
+
+.loading {
+  color: var(--main-text-soft);
+  font-size: 1.15em;
+}
+
+.input {
+  display: none;
+}
+
+.padding {
+  padding: 5px 6px;
+}
