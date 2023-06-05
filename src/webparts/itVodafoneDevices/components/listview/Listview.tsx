@@ -1,8 +1,32 @@
-﻿import * as React from "react";
+﻿import { SPComponentLoader } from "@microsoft/sp-loader";
+import * as React from "react";
 import Add from "../icons/Add";
 import styles from "./Listview.module.scss";
 
 const Listview: React.FC = () => {
+  React.useEffect(() => {
+    SPComponentLoader.loadScript("/_layouts/15/init.js", {
+      globalExportsName: "$_global_init",
+    })
+      .then((): Promise<{}> => {
+        return SPComponentLoader.loadScript("/_layouts/15/MicrosoftAjax.js", {
+          globalExportsName: "Sys",
+        });
+      })
+
+      .then((): Promise<{}> => {
+        return SPComponentLoader.loadScript("/_layouts/15/SP.Runtime.js", {
+          globalExportsName: "SP",
+        });
+      })
+
+      .then((): Promise<{}> => {
+        return SPComponentLoader.loadScript("/_layouts/15/SP.js", {
+          globalExportsName: "SP",
+        });
+      });
+  }, []);
+
   const load = async (): Promise<void> => {
     try {
       const context: SP.ClientContext = SP.ClientContext.get_current();
