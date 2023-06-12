@@ -1,4 +1,8 @@
-﻿import * as React from "react";
+﻿import "microsoft-ajax";
+import * as React from "react";
+import "sharepoint";
+import "sp-init";
+import "sp-runtime";
 import Add from "../icons/Add";
 import styles from "./Listview.module.scss";
 
